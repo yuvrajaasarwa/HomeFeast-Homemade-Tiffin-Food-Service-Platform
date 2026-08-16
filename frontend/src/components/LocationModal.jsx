@@ -265,12 +265,13 @@ export const LocationModal = () => {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '8px', maxHeight: '200px', overflowY: 'auto', paddingRight: '4px' }}>
             {filteredLocalities.map((loc) => {
-              const isCurrent = selectedCity === currentCityObj.id && selectedLocality?.name === loc.name;
+              const locName = typeof loc === 'string' ? loc : loc?.name || '';
+              const isCurrent = selectedCity === currentCityObj.id && (selectedLocality === locName || selectedLocality?.name === locName);
               return (
                 <button
-                  key={loc.name}
+                  key={locName}
                   type="button"
-                  onClick={() => handleSelectLocality(loc)}
+                  onClick={() => handleSelectLocality(locName)}
                   style={{
                     padding: '9px 12px',
                     borderRadius: '10px',
@@ -296,7 +297,7 @@ export const LocationModal = () => {
                     }
                   }}
                 >
-                  <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{loc.name}</span>
+                  <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{locName}</span>
                   {isCurrent ? <Check size={14} color="#DC2626" /> : <MapPin size={12} color="#A8A29E" />}
                 </button>
               );
@@ -359,7 +360,7 @@ export const LocationModal = () => {
           }}
         >
           <div style={{ fontSize: '12px', color: '#57534E' }}>
-            Active Delivery Hub: <strong style={{ color: '#1C1917' }}>{currentCityObj.name}</strong> ({selectedLocality || 'Malviya Nagar'})
+            Active Delivery Hub: <strong style={{ color: '#1C1917' }}>{currentCityObj.name}</strong> ({typeof selectedLocality === 'object' && selectedLocality !== null ? (selectedLocality.name || JSON.stringify(selectedLocality)) : (selectedLocality || 'Malviya Nagar')})
           </div>
 
           <button
