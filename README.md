@@ -1,6 +1,30 @@
 # 🍲 HomeFeast – Homemade Tiffin & Food Service Platform
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-brightgreen?style=for-the-badge&logo=vercel)](https://home-feast-gamma.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![React](https://img.shields.io/badge/Frontend-React_18-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Backend-Node.js_/_Express-339933?style=for-the-badge&logo=nodedotjs)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
+
 HomeFeast is a production-ready, full-stack web application that connects students, working professionals, elderly people, and foodies with verified local home cooks, homemade food providers, and daily tiffin services.
+
+🌐 **Live Web Application**: [https://home-feast-gamma.vercel.app/](https://home-feast-gamma.vercel.app/)
+
+---
+
+## 📸 Application Screenshots
+
+### 1. Home Landing Page & Discovery
+![Home Landing Page Hero](docs/screenshots/hero.png)
+
+### 2. Verified Home Cooks & Kitchen Listings
+![Verified Home Cooks](docs/screenshots/kitchens.png)
+
+### 3. Flexible Subscription Meal Passes
+![Subscription Meal Passes](docs/screenshots/meal_passes.png)
+
+### 4. Admin Governance & Analytics Dashboard
+![Admin Dashboard](docs/screenshots/admin_dashboard.png)
 
 ---
 
@@ -130,9 +154,38 @@ npm run dev
 cd backend
 npm test
 ```
-*Executes all 21 end-to-end assertions.*
+*Executes all end-to-end assertions.*
 
 ---
 
-## 📄 License & Attribution
+## 📜 License
+
+This project is open-source and available under the **[MIT License](LICENSE)**.
+
+```
+MIT License
+
+Copyright (c) 2026 yuvrajaasarwa
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
 Built with pride for homemade food enthusiasts and local home cooks across India.
