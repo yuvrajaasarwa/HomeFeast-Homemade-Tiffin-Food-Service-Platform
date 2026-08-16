@@ -15,7 +15,7 @@ const getHeaders = (isJson = true) => {
 const SEED_USERS = [
   {
     id: 'usr_admin',
-    name: 'Priya Sharma (Admin)',
+    name: 'Yuvraj Sharma (Admin)',
     email: 'admin@homefeast.test',
     phone: '+91 98290 00001',
     role: 'ADMIN',

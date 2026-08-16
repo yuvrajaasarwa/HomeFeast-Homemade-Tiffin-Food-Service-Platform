@@ -7,7 +7,7 @@ export const seedDatabase = () => {
   const users = [
     {
       id: 'usr_admin',
-      name: 'Priya Sharma (Platform Admin)',
+      name: 'Yuvraj Sharma (Platform Admin)',
       email: 'admin@homefeast.test',
       phone: '+91 98290 00001',
       passwordHash: defaultHash,
