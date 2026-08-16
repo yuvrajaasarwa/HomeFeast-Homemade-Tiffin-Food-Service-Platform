@@ -89,8 +89,10 @@ export const connectMongoDB = async () => {
 
   try {
     const conn = await mongoose.connect(uri, {
-      serverSelectionTimeoutMS: 3000, // Quick timeout for graceful fallback
-      connectTimeoutMS: 5000,
+      serverSelectionTimeoutMS: 10000,
+      connectTimeoutMS: 10000,
+      tls: true,
+      retryWrites: true,
     });
 
     isConnected = true;
