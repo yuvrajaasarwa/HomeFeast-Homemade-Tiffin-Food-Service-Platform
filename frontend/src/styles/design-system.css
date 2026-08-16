@@ -1,0 +1,376 @@
+/* ==========================================================================
+   HomeFast - Authentic Warm Culinary Design System
+   Rich Saffron Orange, Golden Amber, Fresh Herb Greens & Soft Warm Cream
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Warm Food Brand & Comforting Cream Canvas */
+  --bg-primary: #FAF8F5;
+  --bg-surface: #FFFFFF;
+  --bg-surface-soft: #FFF9F2;
+  --bg-surface-alt: #F3ECE2;
+  --bg-glass: rgba(255, 255, 255, 0.92);
+  --bg-dark: #1C1917;
+
+  /* Primary Brand Tones - Crimson Red */
+  --primary: #DC2626;
+  --primary-500: #EF4444;
+  --primary-hover: #B91C1C;
+  --primary-light: #FEF2F2;
+  --primary-glow: rgba(220, 38, 38, 0.25);
+
+  /* Warm Golden Yellow / Amber */
+  --accent: #EAB308;
+  --accent-hover: #CA8A04;
+  --accent-light: #FEF9C3;
+  --accent-glow: rgba(234, 179, 8, 0.25);
+
+  /* Culinary Emerald / Pure Herb Green */
+  --success: #2B8A3E;
+  --success-light: #EBFBEE;
+  --success-glow: rgba(43, 138, 62, 0.20);
+
+  /* Warning / Flame Tones */
+  --warning: #EAB308;
+  --warning-light: #FEF9C3;
+
+  /* Text & Charcoal Slate Neutrals */
+  --text-main: #1C1917;
+  --text-heading: #1C1917;
+  --text-muted: #57534E;
+  --text-subtle: #78716C;
+  --text-inverted: #FFFFFF;
+
+  /* Borders & Dividers */
+  --border-light: #EAE3D9;
+  --border-subtle: #F5EFEB;
+  --border-focus: #DC2626;
+
+  /* Gradients */
+  --hero-gradient: linear-gradient(135deg, #DC2626 0%, #EAB308 100%);
+  --premium-gradient: linear-gradient(135deg, #DC2626 0%, #F59E0B 100%);
+  --dark-gradient: linear-gradient(135deg, #1C1917 0%, #292524 100%);
+
+  /* Elevation Shadows */
+  --shadow-xs: 0 1px 2px rgba(28, 25, 23, 0.04);
+  --shadow-sm: 0 2px 8px rgba(28, 25, 23, 0.06);
+  --shadow-md: 0 8px 24px -4px rgba(28, 25, 23, 0.08), 0 2px 6px -2px rgba(28, 25, 23, 0.04);
+  --shadow-lg: 0 16px 36px -6px rgba(28, 25, 23, 0.12), 0 4px 12px -2px rgba(28, 25, 23, 0.06);
+  --shadow-xl: 0 24px 48px -10px rgba(28, 25, 23, 0.18);
+  --shadow-hover: 0 10px 40px -10px rgba(220, 38, 38, 0.25), 0 20px 50px -20px rgba(0, 0, 0, 0.08);
+  --shadow-warm: 0 10px 30px -5px rgba(220, 38, 38, 0.22);
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-heading: 'Poppins', 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Global Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-heading);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 34px;
+  }
+}
+
+/* Glass & Card Surfaces */
+.card-clean {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-smooth);
+}
+
+.card-clean:hover {
+  border-color: var(--border-focus);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Badges & Pills */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.badge-primary {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+}
+
+.badge-success {
+  background: var(--success-light);
+  color: var(--success);
+  border: 1px solid rgba(43, 138, 62, 0.2);
+}
+
+.badge-accent {
+  background: var(--accent-light);
+  color: #A16207;
+  border: 1px solid rgba(234, 179, 8, 0.35);
+}
+
+/* Button Variants */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 14px;
+  transition: all var(--transition-smooth);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #B91C1C 0%, #DC2626 100%);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-surface-soft);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, #EAB308 0%, #CA8A04 100%);
+  color: #1C1917;
+  box-shadow: 0 4px 14px rgba(234, 179, 8, 0.35);
+  border: none;
+}
+
+.btn-accent:hover {
+  background: linear-gradient(135deg, #CA8A04 0%, #A16207 100%);
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(234, 179, 8, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-success {
+  background: var(--success);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(43, 138, 62, 0.3);
+  border: none;
+}
+
+.btn-success:hover {
+  background: #237032;
+  box-shadow: 0 6px 20px rgba(43, 138, 62, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+.btn-lg {
+  padding: 15px 32px;
+  font-size: 15px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Dietary Indicators */
+.diet-tag-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid;
+  position: relative;
+}
+
+.diet-tag-icon::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.diet-tag-icon.veg {
+  border-color: #2B8A3E;
+}
+.diet-tag-icon.veg::after {
+  background: #2B8A3E;
+}
+
+.diet-tag-icon.non_veg {
+  border-color: #E03131;
+}
+.diet-tag-icon.non_veg::after {
+  background: #E03131;
+}
+
+.diet-tag-icon.jain {
+  border-color: #F59E0B;
+}
+.diet-tag-icon.jain::after {
+  background: #F59E0B;
+}
+
+.diet-tag-icon.fit_protein {
+  border-color: #7048E8;
+}
+.diet-tag-icon.fit_protein::after {
+  background: #7048E8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-pulse {
+  animation: pulseSubtle 2s infinite ease-in-out;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-surface-soft);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D7CCC8;
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}

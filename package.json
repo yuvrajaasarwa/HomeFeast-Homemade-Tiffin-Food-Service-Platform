@@ -1,0 +1,23 @@
+{
+  "name": "homefast-backend",
+  "version": "1.0.0",
+  "description": "Backend API for HomeFast Tiffin Service Platform",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed:mongo": "node seed/seedMongo.js",
+    "db:seed": "node seed/seedMongo.js",
+    "test": "node tests/api.test.js"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.17.4",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.9.2"
+  }
+}
